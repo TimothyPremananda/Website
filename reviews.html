@@ -1,83 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <!-- Google tag (gtag.js) -->
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXEW8J9WZ6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+  
   gtag('config', 'G-VXEW8J9WZ6');
 </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos - TimsPhoneReviews</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #000;
-            color: white;
-            text-align: center;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #111;
-            padding: 15px 20px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        main {
-            padding: 50px 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #111;
-            position: relative;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews - TimsPhoneReviews</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #000;
+        color: white;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #111;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+        padding: 50px 20px;
+    }
+
+    .review-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .review-gallery img {
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s, border 0.3s;
+    }
+
+    .review-gallery img:hover {
+        transform: scale(1.05);
+        border: 2px solid white;
+    }
+
+    .review-content {
+        max-width: 700px;
+        margin: 0 auto;
+        min-height: 100px;
+        position: relative;
+    }
+
+    .review-text {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: absolute;
+        width: 100%;
+    }
+
+    .review-text.active {
+        display: block;
+        opacity: 1;
+    }
+
+    footer {
+        background-color: #111;
+        color: #aaa;
+        padding: 20px;
+        margin-top: 50px;
+    }
+</style>
+
+<script>
+    function showReview(index) {
+        const reviews = document.querySelectorAll('.review-text');
+        reviews.forEach((review, i) => {
+            review.classList.remove('active');
+            if (i === index) {
+                review.classList.add('active');
+            }
+        });
+    }
+</script>
 </head>
+
 <body>
-    <header>
-        <div class="logo">TimsPhoneReviews</div>
-        <nav class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="phones.html">Smartphones</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="about.html">About Us</a>
-        </nav>
-    </header>
-    
-    <main>
-        <h1>Videos Gallery</h1>
-        <p>Watch engaging and informative content.</p>
-    </main>
-    
-    <footer>
-        TimsPhoneReviews 2025.
-    </footer>
+<header>
+    <div class="logo">TimsPhoneReviews</div>
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="phones.html">Smartphones</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="about.html">About Us</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Review Highlights</h1>
+    <p>Click on an image to read a short review based on my personal experience.</p>
+
+    <div class="review-gallery">
+        <img src="huawei.jpg" onclick="showReview(0)" alt="Huawei Nova 2i Review">
+        <img src="redmi.jpg" onclick="showReview(1)" alt="Xiaomi Mi 9T Pro Review">
+        <img src="poco.jpg" onclick="showReview(2)" alt="Xiami Poco M4 Pro Review">
+        <img src="xiaomi.jpg" onclick="showReview(3)" alt="Xiaomi Poco F3 Review">
+        <img src="iphone.jpg" onclick="showReview(4)" alt="iPhone 14 Pro Review">
+    </div>
+
+    <div class="review-content">
+        <p class="review-text active">📱 The Huawei Nova 2i was my first serious phone, and it served well with solid build quality and decent camera performance for the time.</p>
+        <p class="review-text">🚀 The Xiaomi Mi 9T Pro felt like a flagship killer — fast, sleek, and that pop-up camera was always a conversation starter.</p>
+        <p class="review-text">🍎 The Xiaomi Poco M4 Pro is kinda ass ngl. </p>
+        <p class="review-text">🚀 The Xiaomi Poco F3 felt like a flagship killer — fast, sleek, and that pop-up camera was always a conversation starter.</p>
+        <p class="review-text">🚀 The iPhone 14 Pro was a leap in smoothness, especially the display and camera quality. iOS took some time to get used to, but it grew on me.</p>
+    </div>
+</main>
+
+<footer>
+    TimsPhoneReviews 2025.
+</footer>
 </body>
 </html>
