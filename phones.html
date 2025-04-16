@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXEW8J9WZ6"></script>
@@ -13,142 +14,75 @@
 </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Images - TimsPhoneReviews</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #000;
-            color: white;
-            text-align: center;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #111;
-            padding: 15px 20px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        main {
-            padding: 50px 20px;
-        }
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .phone-container {
-            width: 200px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .phone-container:hover {
-            transform: scale(1.05);
-        }
-        .specs-table {
-            display: none;
-            margin-top: 20px;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #222;
-            border-collapse: collapse;
-        }
-        .specs-table th, .specs-table td {
-            border: 1px solid #fff;
-            padding: 10px;
-        }
-        .specs-table th {
-            background-color: #444;
-        }
-    </style>
-    <script>
-        function showSpecs(phoneId) {
-            let tables = document.querySelectorAll('.specs-table');
-            tables.forEach(table => table.style.display = 'none');
-            document.getElementById(phoneId).style.display = 'table';
-        }
-    </script>
+    <meta name="description" content="this section covers the Phones of this site, TimsPhoneReviews, where specifications of certain smartphones will be listed.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="phones, smartphones, phone review, smartphone review, android, ios, xiaomi, snapdragon,">
+    <title>Smartphones - TimsPhoneReviews</title>
 </head>
 <body>
     <header>
-        <div class="logo">TimsPhoneReviews</div>
-        <nav class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="phones.html">Smartphones</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="about.html">About Us</a>
-        </nav>
-    </header>
+    <div class="logo">
+        <img src="logo.jpg" alt="TimsPhoneReviews Logo" class="logo-img">
+    </div>
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="phones.html">Smartphones</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="about.html">About Us</a>
+    </nav>
+</header>
+
     
     <main>
         <h1>Smartphone Showcase</h1>
-        <p>Below are the devices I have used in a 7-year timespan. Clicking on an image below shows the specifications of each devices.</p>
-        <div class="image-gallery">
-            <img src="huawei.jpeg" class="phone-container" onclick="showSpecs('phone1-specs')" alt="Phone 1">
-            <img src="redmi.jpg" class="phone-container" onclick="showSpecs('phone2-specs')" alt="Phone 2">
-            <img src="poco.jpg" class="phone-container" onclick="showSpecs('phone3-specs')" alt="Phone 3">
-            <img src="xiaomi.jpg" class="phone-container" onclick="showSpecs('phone4-specs')" alt="Phone 4">
-            <img src="iphone.jpg" class="phone-container" onclick="showSpecs('phone5-specs')" alt="Phone 5">
-        </div>
+        <p>Below are the devices I have used in a 7-year timespan. Clicking on an image below shows the specifications of each device.</p>
         
-        <table id="phone1-specs" class="specs-table">
+        <!-- Image gallery for phones -->
+        <div class="image-gallery">
+            <a href="#phone1"><img src="huawei.jpeg" alt="Huawei Nova 2i"></a>
+            <a href="#phone2"><img src="redmi.jpg" alt="Xiaomi Mi 9T Pro"></a>
+            <a href="#phone3"><img src="poco.jpg" alt="Xiaomi Poco M4 Pro"></a>
+            <a href="#phone4"><img src="xiaomi.jpg" alt="Xiaomi Poco F3"></a>
+            <a href="#phone5"><img src="iphone.jpg" alt="iPhone 14 Pro"></a>
+        </div>
+
+        <!-- Specs tables for each phone -->
+        <table id="phone1" class="specs-table">
             <tr><th>Feature</th><th>Details</th></tr>
             <tr><td>Model</td><td>Huawei Nova 2i</td></tr>
             <tr><td>Screen</td><td>6.1-inch LCD</td></tr>
             <tr><td>Camera</td><td>12MP</td></tr>
         </table>
-        
-        <table id="phone2-specs" class="specs-table">
+
+        <table id="phone2" class="specs-table">
             <tr><th>Feature</th><th>Details</th></tr>
             <tr><td>Model</td><td>Xiaomi Mi 9T Pro</td></tr>
             <tr><td>Screen</td><td>6.1-inch AMOLED</td></tr>
             <tr><td>Camera</td><td>48MP</td></tr>
         </table>
-        
-        <table id="phone3-specs" class="specs-table">
+
+        <table id="phone3" class="specs-table">
             <tr><th>Feature</th><th>Details</th></tr>
             <tr><td>Model</td><td>Xiaomi Poco M4 Pro</td></tr>
             <tr><td>Screen</td><td>6.1-inch LCD</td></tr>
             <tr><td>Camera</td><td>12MP</td></tr>
         </table>
-        
-        <table id="phone4-specs" class="specs-table">
+
+        <table id="phone4" class="specs-table">
             <tr><th>Feature</th><th>Details</th></tr>
             <tr><td>Model</td><td>Xiaomi Poco F3</td></tr>
             <tr><td>Screen</td><td>6.4-inch OLED</td></tr>
             <tr><td>Camera</td><td>48MP</td></tr>
         </table>
-        
-        <table id="phone5-specs" class="specs-table">
+
+        <table id="phone5" class="specs-table">
             <tr><th>Feature</th><th>Details</th></tr>
             <tr><td>Model</td><td>Apple iPhone 14 Pro</td></tr>
             <tr><td>Screen</td><td>6.1-inch OLED</td></tr>
             <tr><td>Camera</td><td>12MP</td></tr>
         </table>
     </main>
-    
+
     <footer>
         TimsPhoneReviews 2025.
     </footer>
